@@ -1,0 +1,10 @@
+<h1>List of all Cats</h1>
+
+<% @cats.each do |cat| %>
+  <ul>
+    <li> <%= link_to cat.name, cat_url(cat), method: :get %> </li>
+  </ul>
+<% end %>
+
+<br>
+<%= button_to "Create New Cat", new_cat_url, method: :get %>
